@@ -1,0 +1,72 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Hilfsfunktionen
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return request.auth.uid == userId;
+    }
+    
+    function hasRole(role) {
+      return isAuthenticated() && 
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == role;
+    }
+
+    // Benutzer-Regeln
+    match /users/{userId} {
+      allow read: if isAuthenticated() && (isOwner(userId) || hasRole('admin'));
+      allow write: if isAuthenticated() && isOwner(userId);
+      allow create: if isAuthenticated();
+    }
+
+    // Feedback-Regeln
+    match /feedback/{feedbackId} {
+      allow read: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+    }
+
+    // Buchungs-Regeln
+    match /bookings/{bookingId} {
+      allow read: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+      allow delete: if isAuthenticated() && hasRole('admin');
+    }
+
+    // Partner-Regeln
+    match /affiliates/{affiliateId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated() && hasRole('admin');
+      allow update, delete: if isAuthenticated() && hasRole('admin');
+    }
+
+    // Benutzereinstellungen-Regeln
+    match /user_preferences/{userId} {
+      allow read, write: if isAuthenticated() && isOwner(userId);
+    }
+
+    // Datenschutz-Regeln
+    match /privacy_consents/{consentId} {
+      allow read: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+      allow create: if isAuthenticated();
+      allow update, delete: if isAuthenticated() && (isOwner(resource.data.userId) || hasRole('admin'));
+    }
+
+    // Performance-Metriken-Regeln
+    match /performance_metrics/{metricId} {
+      allow read: if isAuthenticated() && hasRole('admin');
+      allow write: if isAuthenticated();
+    }
+
+    // Cache-Regeln
+    match /cache/{cacheId} {
+      allow read: if isAuthenticated();
+      allow write: if isAuthenticated() && hasRole('admin');
+    }
+  }
+} 

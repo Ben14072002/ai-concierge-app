@@ -1,0 +1,85 @@
+{
+  "auth": {
+    "register": {
+      "title": "Konto erstellen",
+      "step1": "Persönliche Daten",
+      "step2": "Über Sie",
+      "step3": "Sicherheit",
+      "email": "E-Mail-Adresse",
+      "displayName": "Vollständiger Name",
+      "userType": "Ich bin ein...",
+      "userTypeAirbnb": "Airbnb Host",
+      "userTypeHotel": "Hotelbetreiber",
+      "password": "Passwort",
+      "confirmPassword": "Passwort bestätigen",
+      "showPassword": "Anzeigen",
+      "hidePassword": "Verbergen",
+      "acceptTerms": "Ich akzeptiere die Nutzungsbedingungen",
+      "termsLink": "Nutzungsbedingungen",
+      "continueWithGoogle": "Mit Google fortfahren",
+      "back": "Zurück",
+      "next": "Weiter",
+      "register": "Registrieren",
+      "registering": "Wird registriert...",
+      "error": {
+        "passwordTooShort": "Das Passwort muss mindestens {{minLength}} Zeichen lang sein",
+        "passwordNoNumber": "Das Passwort muss mindestens eine Zahl enthalten",
+        "passwordNoSpecial": "Das Passwort muss mindestens ein Sonderzeichen enthalten",
+        "passwordNoUppercase": "Das Passwort muss mindestens einen Großbuchstaben enthalten"
+      }
+    },
+    "verify": {
+      "title": "E-Mail bestätigen",
+      "message": "Wir haben Ihnen einen Bestätigungslink an Ihre E-Mail-Adresse gesendet. Bitte überprüfen Sie Ihren Posteingang und klicken Sie auf den Link, um Ihr Konto zu bestätigen.",
+      "resendButton": "Bestätigungslink erneut senden",
+      "backToLogin": "Zurück zur Anmeldung"
+    }
+  },
+  "dashboard": {
+    "logout": "Abmelden",
+    "quickActions": "Schnellzugriff",
+    "newBooking": "Neue Buchung",
+    "startChat": "Chat starten",
+    "recentBookings": "Letzte Buchungen",
+    "noBookings": "Keine Buchungen vorhanden",
+    "statistics": "Statistiken",
+    "noData": "Keine Daten verfügbar"
+  },
+  "booking": {
+    "list": {
+      "title": "Meine Buchungen",
+      "noBookings": "Keine Buchungen gefunden",
+      "startBooking": "Starten Sie eine neue Buchung",
+      "guest": "Gast",
+      "guests": "Gäste"
+    },
+    "status": {
+      "confirmed": "Bestätigt",
+      "pending": "Ausstehend",
+      "cancelled": "Storniert"
+    }
+  },
+  "feedback": {
+    "form": {
+      "rating": "Gesamtbewertung",
+      "comment": "Ihr Kommentar",
+      "cleanliness": "Sauberkeit",
+      "communication": "Kommunikation",
+      "value": "Preis-Leistung",
+      "location": "Lage",
+      "amenities": "Ausstattung",
+      "submit": "Feedback senden",
+      "submitting": "Wird gesendet..."
+    },
+    "error": {
+      "submit": "Fehler beim Senden des Feedbacks"
+    }
+  },
+  "error": {
+    "boundary": {
+      "title": "Ein Fehler ist aufgetreten",
+      "message": "Entschuldigung, etwas ist schief gelaufen. Bitte versuchen Sie es später erneut.",
+      "reload": "Seite neu laden"
+    }
+  }
+} 

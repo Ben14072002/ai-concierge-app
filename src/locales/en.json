@@ -1,0 +1,85 @@
+{
+  "auth": {
+    "register": {
+      "title": "Create Account",
+      "step1": "Personal Information",
+      "step2": "About You",
+      "step3": "Security",
+      "email": "Email Address",
+      "displayName": "Full Name",
+      "userType": "I am a...",
+      "userTypeAirbnb": "Airbnb Host",
+      "userTypeHotel": "Hotel Manager",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "showPassword": "Show",
+      "hidePassword": "Hide",
+      "acceptTerms": "I accept the Terms of Service",
+      "termsLink": "Terms of Service",
+      "continueWithGoogle": "Continue with Google",
+      "back": "Back",
+      "next": "Next",
+      "register": "Register",
+      "registering": "Registering...",
+      "error": {
+        "passwordTooShort": "Password must be at least {{minLength}} characters long",
+        "passwordNoNumber": "Password must contain at least one number",
+        "passwordNoSpecial": "Password must contain at least one special character",
+        "passwordNoUppercase": "Password must contain at least one uppercase letter"
+      }
+    },
+    "verify": {
+      "title": "Verify Email",
+      "message": "We've sent a confirmation link to your email address. Please check your inbox and click the link to verify your account.",
+      "resendButton": "Resend confirmation link",
+      "backToLogin": "Back to login"
+    }
+  },
+  "dashboard": {
+    "logout": "Logout",
+    "quickActions": "Quick Actions",
+    "newBooking": "New Booking",
+    "startChat": "Start Chat",
+    "recentBookings": "Recent Bookings",
+    "noBookings": "No bookings available",
+    "statistics": "Statistics",
+    "noData": "No data available"
+  },
+  "booking": {
+    "list": {
+      "title": "My Bookings",
+      "noBookings": "No bookings found",
+      "startBooking": "Start a new booking",
+      "guest": "Guest",
+      "guests": "Guests"
+    },
+    "status": {
+      "confirmed": "Confirmed",
+      "pending": "Pending",
+      "cancelled": "Cancelled"
+    }
+  },
+  "feedback": {
+    "form": {
+      "rating": "Overall Rating",
+      "comment": "Your Comment",
+      "cleanliness": "Cleanliness",
+      "communication": "Communication",
+      "value": "Value for Money",
+      "location": "Location",
+      "amenities": "Amenities",
+      "submit": "Submit Feedback",
+      "submitting": "Submitting..."
+    },
+    "error": {
+      "submit": "Error submitting feedback"
+    }
+  },
+  "error": {
+    "boundary": {
+      "title": "An Error Occurred",
+      "message": "Sorry, something went wrong. Please try again later.",
+      "reload": "Reload Page"
+    }
+  }
+} 

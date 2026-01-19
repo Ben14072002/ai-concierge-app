@@ -24,7 +24,7 @@
     "dompurify": "^3.0.9",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "firebase": "^10.8.1",
+    "firebase": "^11.0.0",
     "i18next": "^23.8.2",
     "i18next-browser-languagedetector": "^7.2.0",
     "i18next-http-backend": "^2.5.0",
